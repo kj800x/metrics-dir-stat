@@ -56,10 +56,9 @@ fn main() {
         "The time it took to do the last scan in ms."
     );
 
-    let tracked_dirs = read_tracked_directories().unwrap();
-
     loop {
         println!("Measuring dirs...");
+        let tracked_dirs = read_tracked_directories().unwrap();
 
         tracked_dirs.iter().for_each(|x| {
             let now = Instant::now();

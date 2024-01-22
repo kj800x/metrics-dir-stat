@@ -13,7 +13,20 @@
 
 ## Example docker compose
 
-TODO
+```yaml
+version: '3.8'
+services:
+  metrics-dir-stat:
+    image: ghcr.io/kj800x/metrics-dir-stat:master
+    container_name: metrics-dir-stat
+    volumes:
+      - /data:/data:ro
+    ports:
+      - "26625:9090/tcp"
+    environment:
+      - TRACKED_DIRS_FILE=/data/docker/metrics-dir-stat/dirs.csv
+    restart: unless-stopped
+```
 
 ## License
 

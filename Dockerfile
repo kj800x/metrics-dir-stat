@@ -1,4 +1,4 @@
-FROM rust:1.74
+FROM rust:1.96
 
 WORKDIR /usr/src/metrics-dir-stat
 COPY . .
